@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local1="clr-namespace:AppObject.Data"
+            
+             x:Class="AppObject.Views.Page1"
+             BackgroundColor="LightGray">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local1:ImageSourceConverter x:Key="imageConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <SearchBar Placeholder="Sanal Sınıf Ara" TextColor="Black" BackgroundColor="White"
+                       TextChanged="SearchBar_TextChanged"></SearchBar>
+            <ListView x:Name="lstMVA" ItemsSource="{Binding .}"
+                      Footer="{Binding count,Source={x:Static local1:MVUFactory.MVUData}}"
+                      IsGroupingEnabled="True"
+                      GroupDisplayBinding="{Binding Key}"
+                      CachingStrategy="RecycleElement"
+                      ItemSelected="lstMVA_ItemSelected"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="lstMVA_Refreshing">
+
+                <ListView.Header>
+                    <ContentView Padding="0.5" BackgroundColor="#fff">
+                        <Label FontSize="Medium" TextColor="#000"
+                               Text="UzmanERP Xamarin"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="Center"
+                             ></Label>
+                       
+                    </ContentView>
+                </ListView.Header>
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Title}" TextColor="#f46508"
+                                   Detail="{Binding Description}" DetailColor="#333"
+                                   ImageSource="{Binding ImageUrl,
+                            Converter={StaticResource imageConverter}}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+                <ListView.FooterTemplate>
+                    <DataTemplate>
+                        <ContentView Padding="0,5,5,0">
+                            <Label FontSize="Medium"
+                                TextColor="#666"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="End"
+                                Text="{Binding ., StringFormat='{}{0} sanal sınıf mevcut'}"></Label>
+                        </ContentView>
+                    </DataTemplate>
+                </ListView.FooterTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+     
+</ContentPage>

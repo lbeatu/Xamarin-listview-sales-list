@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{A8F2EF66-C398-42DE-95F1-6AABF135B1AB}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AppObject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\imageSourceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\MVUFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\Grouping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ListViewÖrnek.xaml.cs">
+      <DependentUpon>ListViewÖrnek.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Sınıf.xaml.cs">
+      <DependentUpon>Sınıf.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ListViewÖrnek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\ardaotuk.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\beraybentesen.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\daronyondem.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\denizdemircioglu.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\enginpolat.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\erolhacisuleyman.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\gurcanserbest.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\hasanozdemir.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\ibrahimkivanc.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\keremozsu.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\mesutaladag.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\mugebehram.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\oguzpastirmaci.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\omerbilgeersoy.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\onurtirpan.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\ozgurerecekler.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\ozkanaltuner.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\sahinboydas.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\selcukuzun.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\semakudu.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\tugberkugurlu.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\ugurtadik.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\umitbilen.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\umitsunar.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\umuterkal.jpeg" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)images\yavuzburuk.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Sınıf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
